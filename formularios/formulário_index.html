@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulário Simples</h1>
+
+    <form action="" method="post">
+        <p><label for="inome">Nome:</label>
+            <input type="text" name="Nome" id="inome">
+        </p>
+        <p><label for="iemail">Email:</label>
+            <input type="email" name="Email" id="iemail">
+        </p>
+        <p><label for="isenha">Senha:</label>
+            <input type="password" name="Senha" id="isenha">
+        </p>
+        <input type="submit" value="Cadastro">
+    </form>
+
+    <h1>Formulário de Cadastro</h1>
+    
+    <form action="" method="post">
+        <p><label for="icompleto">Nome Completo</label>
+            <input type="text" name="Nome Completo" id="icompleto">
+        </p>
+        <p><label for="iusuario">Nome de Usuário</label>
+            <input type="text" name="Nome do Usuário" id="iusuario">
+        </p>
+        <p><label for="iEmail">Email</label>
+            <input type="email" name="Email" id="iEmail">
+        </p>
+        <p><label for="iSenha">Senha</label>
+            <input type="password" name="Senha" id="iSenha">
+        </p>
+
+        <p> Time: <br>
+            <input type="radio" name="São Paulo" id="isp">
+            <label for="isp">São Paulo</label>
+            <input type="radio" name="Corinthians" id="icorinthians">
+            <label for="icorinthians">Corinthians</label>
+            <input type="radio" name="Palmeiras" id="iporco">
+            <label for="iporco">Palmeiras</label>
+            <input type="radio" name="Flamengo" id="icarioca">
+            <label for="icarioca">Flamengo</label>
+        </p>
+
+        <p> Interesses: <br>
+            <input type="checkbox" name="Tecnologia" id="itec">
+            <label for="itec">Tecnologia</label>
+            <input type="checkbox" name="Esporte" id="iespor">
+            <label for="iespor">Esporte</label>
+            <input type="checkbox" name="Música" id="imusi">
+            <label for="imusi">Música</label>
+        </p>
+
+        <p>Cidade: <br>
+
+            <select name="" id="">
+                <option value="Selecione">Selecione</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Rio de Janeiro">Belo Horizonte</option>
+                <option value="Belo Horizonte">Rio de Janeiro</option>
+
+            </select>
+        </p>
+
+        <p>Mensagem: <br>
+            <textarea name="Mensagem" id="imensagem"></textarea>
+        </p>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Redefinir">
+
+    </form>
+
+</body>
+</html>

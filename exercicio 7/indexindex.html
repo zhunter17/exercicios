@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML Semântico</title>
+</head>
+<body>
+    
+  <header>
+    <h1>Blog</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Notícias</a>
+      <a href="#">Aulas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="posts">
+      <article class="post--main">
+        <img src="./images/main-post.jpg" alt="Imagem principal do post">
+        <h2>Aprenda HTML semântico</h2>
+      </article>
+
+      <section class="posts--recent">
+        <h3>Recentes</h3>
+        
+        <div>
+          <article class="post--generic">
+            <img src="./images/cover.jpg" alt="Capa do post 1">
+            <h4>Post 1</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, molestiae.</p>
+          </article>
+          <article class="post--generic">
+            <img src="./images/cover.jpg" alt="Capa do post 2">
+            <h4>Post 2</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, molestiae.</p>
+          </article>
+          <!-- Repete para os outros posts -->
+        </div>
+      </section>
+    </section>
+
+    <aside>
+      <section class="search__section">
+        <h3>Faça uma busca</h3>
+        <input type="text" placeholder="Aula de HTML...">
+      </section>
+
+      <section class="posts--most-read">
+        <h3>Mais lidos</h3>
+        <div>
+          <article class="post--generic">
+            <img src="./images/cover.jpg" alt="Capa do post mais lido 1">
+            <h4>Post 1</h4>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </article>
+          <article class="post--generic">
+            <img src="./images/cover.jpg" alt="Capa do post mais lido 2">
+            <h4>Post 2</h4>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </article>
+          <!-- Repete para os outros -->
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Blog - 2023 | Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>

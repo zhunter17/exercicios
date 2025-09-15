@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agência CineC — Site Completo</title>
+  <meta name="description" content="Site de demonstração completo: home, serviços, portfólio e contato. Responsivo e acessível." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --maxw:1100px; --ff: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--ff);background:linear-gradient(180deg,#071024 0%, #081126 60%);color:#e6eef7}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;padding:18px;margin-bottom:28px}
+    .nav{display:flex;gap:18px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#5b21b6);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav ul{display:flex;gap:12px;list-style:none;margin:0;padding:0}
+    .cta{padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#5b21b6);box-shadow:0 8px 24px rgba(124,58,237,0.18)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-bottom:32px}
+    .hero-card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    h1{font-size:34px;margin:0 0 8px}
+    p.lead{margin:0;color:var(--muted)}
+    .features{display:flex;gap:12px;margin-top:18px}
+    .feature{background:var(--glass);padding:10px;border-radius:10px;font-size:14px}
+
+    /* Services & grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Portfolio */
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .thumb{height:140px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0f1724, #10243a);color:var(--muted)}
+
+    /* Contact */
+    form{display:grid;gap:12px}
+    input,textarea,button{padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    textarea{min-height:120px;resize:vertical}
+
+    footer{margin-top:28px;padding:18px;border-radius:12px;background:transparent;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid,.portfolio-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .grid,.portfolio-grid{grid-template-columns:1fr}
+      header{padding:12px}
+    }
+
+    /* small helpers */
+    .small{font-size:13px;color:var(--muted)}
+    .badge{display:inline-block;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600}
+
+    /* accessible focus */
+    a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(124,58,237,0.18);outline-offset:2px}
+  </style>
+</head>
+<body>
+  <header class="container" role="banner">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden> C </div>
+        <div>
+          <div style="font-weight:700">CineC Agência</div>
+          <div class="small">Produção & Design</div>
+        </div>
+      </div>
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="#home" data-link>Início</a></li>
+          <li><a href="#services" data-link>Serviços</a></li>
+          <li><a href="#portfolio" data-link>Portfólio</a></li>
+          <li><a href="#contact" data-link>Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a class="cta" href="#contact" data-link>Solicitar orçamento</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="app">
+    <!-- HOME -->
+    <section id="home" class="hero-card" role="region" aria-labelledby="home-title">
+      <div class="hero" style="align-items:start">
+        <div class="hero-card">
+          <h1 id="home-title">Criamos experiências visuais memoráveis</h1>
+          <p class="lead">Design, produção de vídeo e desenvolvimento web para marcas que querem marcar presença. Site demo completo, pronto para personalizar.</p>
+          <div class="features" role="list">
+            <div class="feature" role="listitem">Website responsivo</div>
+            <div class="feature" role="listitem">Identidade visual</div>
+            <div class="feature" role="listitem">Vídeo & Motion</div>
+          </div>
+          <div style="margin-top:18px;display:flex;gap:12px">
+            <a class="badge" href="#portfolio" data-link>Ver portfólio</a>
+            <a class="badge" href="#services" data-link>Ver serviços</a>
+          </div>
+        </div>
+        <aside style="min-width:280px">
+          <div class="card">
+            <h3>Contato rápido</h3>
+            <p class="muted">Tem um projeto? Envie uma mensagem e responderemos em até 48h (demo).</p>
+            <div style="margin-top:12px">
+              <div class="small">Email</div>
+              <div class="muted">contato@cinec.demo</div>
+              <div style="height:10px"></div>
+              <div class="small">Telefone</div>
+              <div class="muted">+55 (11) 9 9999-9999</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" style="margin-top:22px" aria-labelledby="services-title">
+      <h2 id="services-title">Serviços</h2>
+      <p class="muted">Soluções end-to-end: do conceito ao produto final.</p>
+      <div class="grid" style="margin-top:12px">
+        <article class="card" aria-labelledby="s1">
+          <h3 id="s1">Desenvolvimento Web</h3>
+          <p class="muted">Sites responsivos, lojas, blogs e aplicações PWA com ênfase em performance e SEO.</p>
+        </article>
+        <article class="card" aria-labelledby="s2">
+          <h3 id="s2">Produção de Vídeo</h3>
+          <p class="muted">Roteiro, gravação e pós-produção — vídeos institucionais, comerciais e conteúdo para redes.</p>
+        </article>
+        <article class="card" aria-labelledby="s3">
+          <h3 id="s3">Branding & Design</h3>
+          <p class="muted">Identidade visual, logos, embalagens e materiais gráficos coerentes com a estratégia da marca.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" style="margin-top:22px" aria-labelledby="portfolio-title">
+      <h2 id="portfolio-title">Portfólio</h2>
+      <p class="muted">Pequena seleção de projetos demo.</p>
+      <div class="portfolio-grid" style="margin-top:12px">
+        <div class="card thumb" role="article" aria-label="Projeto: Trailer institucional">Trailer institucional</div>
+        <div class="card thumb" role="article" aria-label="Projeto: Campanha redes">Campanha redes</div>
+        <div class="card thumb" role="article" aria-label="Projeto: E-commerce">E‑commerce</div>
+        <div class="card thumb" role="article" aria-label="Projeto: Identidade visual">Identidade visual</div>
+        <div class="card thumb" role="article" aria-label="Projeto: Motion graphics">Motion graphics</div>
+        <div class="card thumb" role="article" aria-label="Projeto: Documentário curto">Doc. curto</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="margin-top:22px" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contato</h2>
+      <p class="muted">Preencha e teste localmente — este formulário é apenas ilustrativo (não envia sem backend).</p>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:12px">
+        <div class="card">
+          <form id="contactForm" novalidate>
+            <label>
+              <div class="small">Seu nome</div>
+              <input type="text" name="name" aria-label="Seu nome" required />
+            </label>
+            <label>
+              <div class="small">Email</div>
+              <input type="email" name="email" aria-label="Email" required />
+            </label>
+            <label>
+              <div class="small">Mensagem</div>
+              <textarea name="message" aria-label="Mensagem" required></textarea>
+            </label>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button type="submit">Enviar mensagem</button>
+              <div class="small" id="formStatus" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+        <aside class="card">
+          <h3>Localização</h3>
+          <p class="muted">São Paulo — Demo. Inclua mapa, Google Maps iframe ou imagem conforme precisar.</p>
+          <h3 style="margin-top:12px">Horário</h3>
+          <p class="muted">Seg — Sex: 9h — 18h</p>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <strong>CineC Agência</strong>
+          <div class="small">Direitos reservados © "2025"</div>
+        </div>
+        <div class="small">Feito com ❤️ — demo. Código aberto para personalizar.</div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // Navegação interna (single-file)
+    document.querySelectorAll('[data-link]').forEach(el=>{
+      el.addEventListener('click', e=>{
+        e.preventDefault();
+        const href = el.getAttribute('href');
+        if(!href) return;
+        const id = href.replace('#','');
+        const target = document.getElementById(id);
+        if(target){
+          target.scrollIntoView({behavior:'smooth',block:'start'});
+          history.replaceState(null,'',href);
+          target.querySelector('h2, h1')?.focus();
+        }
+      })
+    })
+
+    // Form demo (client-side validation + fake submit)
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = data.get('name').trim();
+      const email = data.get('email').trim();
+      const msg = data.get('message').trim();
+      if(!name || !email || !msg){
+        status.textContent = 'Por favor preencha todos os campos.'; return;
+      }
+      status.textContent = 'Enviando...';
+      // Simula envio
+      setTimeout(()=>{
+        status.textContent = 'Mensagem recebida! Em uma versão real ela seria enviada por e-mail.';
+        form.reset();
+      }, 900);
+    })
+
+    // Accessibility: ensure main landmark focusable
+    document.querySelector('main').setAttribute('tabindex','-1');
+  </script>
+</body>
+</html>

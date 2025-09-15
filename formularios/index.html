@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Trabalhando com Formulários</h1>
+        <p>Formulário Simples</p>
+
+        <form action="cadastro.php" method="post"> <!--abre a tag form, para formulários, action envia as informações para o usuário/servidor-->
+            <p><label for="iNome">Nome:</label> <!--etiqueta que identifica, associa uma legenda para o input, for se conecta ao identificador(id)-->
+                <input type="text" name="Nome" id="iNome"> <!--input é o botão, o type determina quais caracteres serão colocados/tipo de botão, name é o tipo de informação pedida, id identificador do campo-->
+            </p>
+            <p><label for="iSobrenome">Sobrenome:</label>
+                <input type="text" name="Sobrenome" id="iSobrenome">
+            </p>
+            <input type="submit" value="Inscreva-se"> <!--submit coloca um botão para prosseguir, value fala o que estará escrito no botão-->
+
+        </form>
+
+
+        <p>Formulário de Cadastro</p>
+
+        <form action="" method="post">
+            <p><label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome">
+            </p>
+
+            <p><label for="igmail">Gmail:</label>
+                <input type="email" name="gmail" id="igmail">
+            </p>
+
+            <p><label for="isenha">Senha:</label>
+                <input type="password" name="senha" id="isenha">
+            </p>
+
+            <!--botão de opção (radio), só permite marcar um-->
+            <p>Comida Favorita
+                <input type="radio" name="lasanha" id="ilasanha">
+                <label for="ilasanha">Lasanha</label>
+                <input type="radio" name="churrasco" id="ichurrasco">
+                <label for="ichurrasco">Churrasco</label>
+                <input type="checkbox">
+                <select name="" id="">
+                    <option value="SP">São Paulo</option>
+                    <option value="SP">Corinthians</option>
+                </select>
+
+                <textarea name="" id=""></textarea>
+            </p>
+
+
+
+
+
+
+
+            <input type="submit" value="Próximo">
+
+        </form>
+
+
+    </body>
+</html>

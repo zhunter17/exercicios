@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>costruindo uma tabela</h1>
+
+    <!--
+        TABLE = Tabela
+        TABLE ROW = linha de tabela
+        TABLE DATA = Dado da célula
+    -->
+
+    <table border="8" width="60%">
+        <tr>
+            <td>nome</td>
+            <td>sobrenome</td>
+            <td>gosto musical</td>
+        </tr>
+
+        <tr>
+            <td>romuloh</td>
+            <td>murilo</td>
+            <td>diverso</td>
+        </tr> 
+        
+        <tr>
+            <td>vinicius</td>
+            <td>nogueira</td>
+            <td>trap</td>
+        </tr> 
+       
+        <tr>
+            <td>guilherme</td>
+            <td>frança</td>
+            <td>rock</td>
+        </tr>
+    </table>
+
+    <p>Separando tabelas</p>
+    <!--
+        TABLE
+            CAPTION
+            THEAD
+                TH,TR,TD
+            TBODY
+                TR,TH,TD
+            TFOOT
+                TR,TH,TD
+
+                MESCLAR COLUNA = colspan
+                MESCLAR 
+    -->
+    <table border="8" width="50%">
+        <caption>Dinheiro poupado em 2026</caption> <!--titulo da tabela-->
+        <thead>
+            <TR>
+                <th>mês</th>
+                <th>poupança</th>
+                <th>MESCLANDO CÉLULAS</th>
+            </TR>
+        </thead> 
+
+        <tbody>
+            <tr>
+                <td>janeiro</td>
+                <td>2,000</td>
+                <td>5,000</td>
+            </tr>
+            <tr>
+                <td>fevereiro</td>
+                <td>200</td>
+                <td>300,000</td>
+            </tr>
+            <tr>
+                <td>março</td>
+                <td colspan="2">mesclando</td>
+            </tr>
+
+
+
+        </tbody>
+
+
+
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
